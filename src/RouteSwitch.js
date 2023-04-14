@@ -17,6 +17,11 @@ const RouteSwitch = () => {
     setInventory((inventory) => [...inventory, item]);
   };
 
+  const clearCart = () => {
+    setCartQuantity(0);
+    setInventory([]);
+  };
+
   return (
     <BrowserRouter>
       <Navbar cartQuantity={cartQuantity} />
@@ -33,7 +38,13 @@ const RouteSwitch = () => {
         />
         <Route
           path="/cart"
-          element={<Cart cartQuantity={cartQuantity} inventory={inventory} />}
+          element={
+            <Cart
+              cartQuantity={cartQuantity}
+              inventory={inventory}
+              clearCart={clearCart}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

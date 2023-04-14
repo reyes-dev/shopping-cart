@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ cartQuantity, inventory }) => {
+const Cart = ({ cartQuantity, inventory, clearCart }) => {
   const displayCart = () => {
     return inventory.map((item) => {
       return (
@@ -17,6 +17,14 @@ const Cart = ({ cartQuantity, inventory }) => {
       <h1>Shopping Cart</h1>
       <h2>Total # of Items: {cartQuantity}</h2>
       <ul>{displayCart()}</ul>
+      <button
+        onClick={() => {
+          clearCart();
+          alert("Your purchase is complete. Thank you!");
+        }}
+      >
+        Checkout
+      </button>
     </div>
   );
 };
