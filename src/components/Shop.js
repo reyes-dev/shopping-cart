@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Item from "./Item";
-import { itemData } from "../data/itemdata";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-const Shop = () => {
-  const item = itemData[0];
-
+const Shop = ({ incrementCartQuantity }) => {
   return (
     <div>
       <h1>Shop</h1>
-      <Item filePath={item.filePath} name={item.name} />
+      <Item incrementCartQuantity={incrementCartQuantity}></Item>
     </div>
   );
 };
