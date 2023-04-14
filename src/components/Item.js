@@ -26,8 +26,10 @@ const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
       <button onClick={decrementCount}>-</button>
       <button
         onClick={() => {
-          incrementCartQuantity();
-          addToCart({ name: name, filePath: filePath, quantity: itemCount });
+          if (itemCount > 0) {
+            incrementCartQuantity();
+            addToCart({ name: name, filePath: filePath, quantity: itemCount });
+          }
         }}
       >
         Add to Cart
