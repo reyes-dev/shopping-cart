@@ -3,15 +3,20 @@ import Item from "./Item";
 import { itemData } from "../data/itemdata";
 
 const Shop = ({ incrementCartQuantity, addToCart }) => {
+  const items = itemData.map((item) => {
+    return (
+      <Item
+        filePath={item.filePath}
+        name={item.name}
+        incrementCartQuantity={incrementCartQuantity}
+        addToCart={addToCart}
+      />
+    );
+  });
   return (
     <div>
       <h1>Shop</h1>
-      <Item
-        filePath={itemData[0].filePath}
-        name={itemData[0].name}
-        incrementCartQuantity={incrementCartQuantity}
-        addToCart={addToCart}
-      ></Item>
+      {items}
     </div>
   );
 };
