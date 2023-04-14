@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Item = ({ filePath, name, incrementCartQuantity }) => {
+const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
   // The amount of an item that the shopper wants to purchase
   const [itemCount, setItemCount] = useState(0);
   // Set amount of item to add to cart
@@ -16,6 +16,7 @@ const Item = ({ filePath, name, incrementCartQuantity }) => {
       }
     });
   };
+
   return (
     <div>
       <img src={filePath} alt={name}></img>
@@ -23,7 +24,14 @@ const Item = ({ filePath, name, incrementCartQuantity }) => {
       <button onClick={incrementCount}>+</button>
       <p>{itemCount}</p>
       <button onClick={decrementCount}>-</button>
-      <button onClick={incrementCartQuantity}>Add to Cart</button>
+      <button
+        onClick={() => {
+          incrementCartQuantity();
+          addToCart({ name: name, filePath: filePath, quantity: itemCount });
+        }}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };

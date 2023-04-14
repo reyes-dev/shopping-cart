@@ -7,9 +7,14 @@ import Navbar from "./components/Navbar";
 
 const RouteSwitch = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
+  const [inventory, setInventory] = useState([]);
 
   const incrementCartQuantity = () => {
     setCartQuantity((cartQuantity) => cartQuantity + 1);
+  };
+
+  const addToCart = (item) => {
+    setInventory((inventory) => [...inventory, item]);
   };
 
   return (
@@ -19,9 +24,17 @@ const RouteSwitch = () => {
         <Route path="/" element={<Homepage />} />
         <Route
           path="/shop"
-          element={<Shop incrementCartQuantity={incrementCartQuantity} />}
+          element={
+            <Shop
+              incrementCartQuantity={incrementCartQuantity}
+              addToCart={addToCart}
+            />
+          }
         />
-        <Route path="/cart" element={<Cart cartQuantity={cartQuantity} />} />
+        <Route
+          path="/cart"
+          element={<Cart cartQuantity={cartQuantity} inventory={inventory} />}
+        />
       </Routes>
     </BrowserRouter>
   );
