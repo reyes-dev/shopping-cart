@@ -1,7 +1,7 @@
 import React from "react";
-import Item from "./Item";
-import { itemData } from "../data/itemdata";
-import "../styles/shop.css";
+import Item from "../../components/Item/Item";
+import { itemData } from "../../data/itemdata";
+import "../../styles/shop.css";
 
 const Shop = ({ incrementCartQuantity, addToCart }) => {
   const items = itemData.map((item) => {

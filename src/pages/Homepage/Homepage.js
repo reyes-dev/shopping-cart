@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/homepage.css";
+import "../../styles/homepage.css";
 
 const Homepage = () => {
   return (
@@ -19,7 +19,7 @@ const Homepage = () => {
           enemies or lighting the way in dark dungeons.
         </p>
         <img
-          src={require("../img/homepage-display-1.png")}
+          src={require("../../img/homepage-display-1.png")}
           alt="paper-mario-ttyd"
           className="img-1"
         ></img>
@@ -35,7 +35,7 @@ const Homepage = () => {
           succeed in your quest. Let's-a go!
         </p>
         <img
-          src={require("../img/homepage-display-2.png")}
+          src={require("../../img/homepage-display-2.png")}
           alt="paper-mario-ttyd"
           className="img-2"
         ></img>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
-import Navbar from "./components/Navbar";
+import Homepage from "./pages/Homepage/Homepage";
+import Shop from "./pages/Shop/Shop";
+import Cart from "./pages/Cart/Cart";
+import Navbar from "./components/Navbar/Navbar";
 import "./styles/main.css";
 
 const RouteSwitch = () => {
