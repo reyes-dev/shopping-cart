@@ -18,17 +18,23 @@ const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
   };
 
   return (
-    <div>
+    <div className="item">
       <img src={filePath} alt={name}></img>
       <li>{name}</li>
-      <button onClick={incrementCount}>+</button>
-      <p>{itemCount}</p>
-      <button onClick={decrementCount}>-</button>
+      <div className="item-counter">
+        <button onClick={decrementCount}>-</button>
+        <p>{itemCount}</p>
+        <button onClick={incrementCount}>+</button>
+      </div>
       <button
         onClick={() => {
           if (itemCount > 0) {
             incrementCartQuantity();
-            addToCart({ name: name, filePath: filePath, quantity: itemCount });
+            addToCart({
+              name: name,
+              filePath: filePath,
+              quantity: itemCount,
+            });
           }
         }}
       >
