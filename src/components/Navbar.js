@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/navbar.css";
 
 const Navbar = ({ cartQuantity }) => {
   return (
-    <div>
-      <Link to="/">Homepage</Link>
-      <Link to="/shop">Shop</Link>
-      <Link to="/cart">Cart: {cartQuantity} </Link>
+    <div className="navbar">
+      <Link to="/">HOMEPAGE</Link>
+      <Link to="/shop" className="shop">
+        SHOP
+      </Link>
+      <Link to="/cart" className="cart">
+        CART: {cartQuantity}{" "}
+      </Link>
     </div>
   );
 };

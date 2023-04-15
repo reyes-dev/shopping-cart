@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/cart.css";
 
 const Cart = ({ cartQuantity, inventory, clearCart }) => {
   const displayCart = () => {
@@ -13,18 +14,20 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
   };
 
   return (
-    <div>
+    <div className="cart-page ">
       <h1>Shopping Cart</h1>
-      <h2>Total # of Items: {cartQuantity}</h2>
-      <ul>{displayCart()}</ul>
-      <button
-        onClick={() => {
-          clearCart();
-          alert("Your purchase is complete. Thank you!");
-        }}
-      >
-        Checkout
-      </button>
+      <div className="cart-gallery">
+        <h2>Total # of Items: {cartQuantity}</h2>
+        <ul>{displayCart()}</ul>
+        <button
+          onClick={() => {
+            clearCart();
+            alert("Your purchase is complete. Thank you!");
+          }}
+        >
+          Checkout
+        </button>
+      </div>
     </div>
   );
 };

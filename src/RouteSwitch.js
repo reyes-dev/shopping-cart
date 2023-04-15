@@ -4,6 +4,7 @@ import Homepage from "./components/Homepage";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import Navbar from "./components/Navbar";
+import "./styles/main.css";
 
 const RouteSwitch = () => {
   const [cartQuantity, setCartQuantity] = useState(0);

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 5rem;
+  background-color: #FEFAE0;
+  justify-items: center;
+  align-items: center;
+}
+.shop {
+  grid-column: 2 / 3;
+}
+.cart {
+  grid-row-start: 1;
+  grid-column-start: 3 / 4;
+  grid-column-end:  -1;
+  justify-self: end;
+}
+.navbar > a {
+  padding: 1rem;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #d62828;
+}
+.navbar > a:hover {
+  background-color: rgb(247, 127, 0, 0.8);
+}
