@@ -24,6 +24,7 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
             clearCart();
             alert("Your purchase is complete. Thank you!");
           }}
+          disabled={cartQuantity === 0}
         >
           Checkout
         </button>
