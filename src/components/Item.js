@@ -35,6 +35,7 @@ const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
               filePath: filePath,
               quantity: itemCount,
             });
+            setItemCount(0);
           }
         }}
       >
