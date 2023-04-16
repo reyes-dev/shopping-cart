@@ -27,7 +27,11 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
       />
       <h1>Shopping Cart</h1>
       <div className="cart-gallery">
-        <h2>Total # of Items: {cartQuantity}</h2>
+        {cartQuantity > 0 ? (
+          <h2>Total # of Items: {cartQuantity}</h2>
+        ) : (
+          <h2>Your cart is empty</h2>
+        )}
         <ul>{displayCart()}</ul>
         <button
           onClick={() => {
