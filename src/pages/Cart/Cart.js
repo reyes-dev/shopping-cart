@@ -10,7 +10,7 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
   const displayCart = () => {
     return inventory.map((item) => {
       return (
-        <li>
+        <li key={item.name}>
           <img src={item.filePath} alt={item.name}></img>
           {item.name} x {item.quantity}
         </li>
