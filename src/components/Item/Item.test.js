@@ -31,10 +31,10 @@ describe("Item component", () => {
     await user.click(incrementBtn);
     await user.click(incrementBtn);
 
-    expect(screen.getByTitle("item-count").textContent).toMatch("2");
+    expect((await screen.findByTitle("item-count")).textContent).toMatch("2");
 
     await user.click(decrementBtn);
 
-    expect(screen.getByTitle("item-count").textContent).toMatch("1");
+    expect((await screen.findByTitle("item-count")).textContent).toMatch("1");
   });
 });
