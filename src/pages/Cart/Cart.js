@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../../components/Modal/Modal";
 import "../../styles/cart.css";
 
 const Cart = ({ cartQuantity, inventory, clearCart }) => {
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
+  const handleOpen = () => setShowModal(true);
+
   const displayCart = () => {
     return inventory.map((item) => {
       return (
@@ -15,6 +20,11 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
 
   return (
     <div className="cart-page ">
+      <Modal
+        handleClose={handleClose}
+        handleOpen={handleOpen}
+        showModal={showModal}
+      />
       <h1>Shopping Cart</h1>
       <div className="cart-gallery">
         <h2>Total # of Items: {cartQuantity}</h2>
@@ -22,7 +32,7 @@ const Cart = ({ cartQuantity, inventory, clearCart }) => {
         <button
           onClick={() => {
             clearCart();
-            alert("Your purchase is complete. Thank you!");
+            handleOpen();
           }}
           disabled={cartQuantity === 0}
         >
