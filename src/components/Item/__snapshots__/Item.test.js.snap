@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component renders 0 1`] = `
+<div>
+  <div
+    class="item"
+    data-testid="item-component"
+  >
+    <img />
+    <li />
+    <div
+      class="item-counter"
+    >
+      <button>
+        -
+      </button>
+      <p
+        title="item-count"
+      >
+        0
+      </p>
+      <button>
+        +
+      </button>
+    </div>
+    <button>
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;

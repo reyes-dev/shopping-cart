@@ -23,7 +23,7 @@ const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
       <li>{name}</li>
       <div className="item-counter">
         <button onClick={decrementCount}>-</button>
-        <p>{itemCount}</p>
+        <p title="item-count">{itemCount}</p>
         <button onClick={incrementCount}>+</button>
       </div>
       <button
