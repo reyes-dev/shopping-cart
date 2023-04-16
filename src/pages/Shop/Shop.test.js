@@ -11,7 +11,7 @@ describe("Shop component", () => {
 
   it("renders all item components", () => {
     render(<Shop />);
-    expect(screen.queryAllByTestId("item-component")).toHaveLength(12);
+    expect(screen.getAllByTestId("item-component")).toHaveLength(12);
   });
 
   it("renders 12 list items", () => {
