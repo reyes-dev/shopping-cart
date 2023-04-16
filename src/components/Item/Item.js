@@ -18,7 +18,7 @@ const Item = ({ filePath, name, incrementCartQuantity, addToCart }) => {
   };
 
   return (
-    <div className="item">
+    <div className="item" data-testid="item-component">
       <img src={filePath} alt={name}></img>
       <li>{name}</li>
       <div className="item-counter">
