@@ -27,7 +27,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Navbar cartQuantity={cartQuantity} />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="shopping-cart/" element={<Homepage />} />
         <Route
           path="/shop"
           element={
