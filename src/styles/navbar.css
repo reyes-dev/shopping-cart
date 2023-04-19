@@ -3,7 +3,7 @@
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 5rem;
+  height: 10%;
   background-color: #FEFAE0;
   justify-items: center;
   align-items: center;
