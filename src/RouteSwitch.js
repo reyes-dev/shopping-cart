@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
 import Shop from "./pages/Shop/Shop";
 import Cart from "./pages/Cart/Cart";
@@ -27,7 +27,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Navbar cartQuantity={cartQuantity} />
       <Routes>
-        <Route path="shopping-cart/" element={<Homepage />} />
+        <Route path="/shopping-cart" element={<Homepage />} />
         <Route
           path="/shop"
           element={
@@ -47,6 +47,7 @@ const RouteSwitch = () => {
             />
           }
         />
+        <Route path="*" element={<Navigate to="/shopping-cart" replace />} />
       </Routes>
     </BrowserRouter>
   );
